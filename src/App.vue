@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       isShow: true,
-      showContent: false
+
 
     }
   },
@@ -27,9 +27,7 @@ export default {
   //   });
   // },
   mounted() {
-    setTimeout(() => {
-    this.showContent = false; // 将showContent设置为false，以隐藏HomePage组件
-  }, 0);
+
   },
 }
 </script>
@@ -43,7 +41,7 @@ export default {
     <div class="main-area">
       <RouterView />
     </div>
-    <HomePage v-if="showContent" />
+    <HomePage v-if="this.$route.path == '/'" />
 
     <FooterView />
 
